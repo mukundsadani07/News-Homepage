@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "![Design preview for the News homepage coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
-  "private":"true",
+  "private": "true",
   "scripts": {
-    "start": "vite"
+    "start": "vite",
+    "build-css": "tailwindcss build -i style.css -o ./style.css"
   },
   "repository": {
     "type": "git",
