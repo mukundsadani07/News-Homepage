@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+html{
+    margin:0;
+    padding:0;
+    border:0;
+    box-sizing: border-box;
+}
+ body{
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: 'Inter','sans-serif';
+ }
+
+
+/* Sidebar Icon */
+
+.sidebar{
+    width:24px;
+    height:24px;
+    transition: all 0.2s;
+}
+.sidebar-top,
+.sidebar-middle,
+.sidebar-bottom{
+    position:absolute;
+    top:0;
+    left:0;
+    height: 2px;
+    width:34px;
+    transform:rotate(0);
+    transition: all 0.5s;
+}
+.sidebar-middle{
+    transform: translateY(7px);
+}
+.sidebar-bottom{
+    transform: translateY(14px);
+}
+
+/* Sidebar Menu */
+.open {
+    transform: translateY(0);
+    transform: rotate(90deg);
+}
+
+.open .sidebar-middle{
+    display:none;
+}
+
+.open .sidebar-top{
+    transform:rotate(45deg) translateY(6px) translateX(6px);
+
+}
+
+.open .sidebar-bottom{
+    transform:rotate(-45deg) translateY(6px) translateX(-5px);
+}
